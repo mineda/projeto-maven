@@ -3,11 +3,14 @@ package br.gov.sp.fatec.projetomaven;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
+
 /**
  * Unit test for simple App.
  */
 public class AppTest
 {
+
+    private static final double DELTA = 1e-15;
 
     /**
      * Rigourous Test :-)
@@ -15,7 +18,10 @@ public class AppTest
     @Test
     public void testSoma()
     {
-        Calculadora calc = new Calculadora();
-        assertTrue(calc.soma() == 2);
+        final Calculadora calc = new Calculadora();
+        assertEquals(calc.soma(), 10.0, DELTA);
+        assertEquals(calc.sub(), 0.0, DELTA);
+        assertEquals(calc.mult(), 25.0, DELTA);
+        assertEquals(calc.div(), 1.0, DELTA);
     }
 }
