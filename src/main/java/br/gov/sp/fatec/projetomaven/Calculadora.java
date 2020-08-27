@@ -17,4 +17,8 @@ public class Calculadora {
         return n1 + n2;
     }
 
+    public Integer sub() {
+        return n1 - n2;
+    }
+
 }
